@@ -26,7 +26,7 @@ class ProfileController extends Controller
         
         setcookie($cookie_name, $cookie_value, time() + ($minutes * 60), $path, $domain, $secure, $httpOnly);
         
-        print_r($data);
+        return response()->json($data, 200);
 
 
     }
